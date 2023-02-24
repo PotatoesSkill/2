@@ -1,15 +1,14 @@
-<!DOCTYPE html>
 <html>
     <head><title>2</title></head>
-    <body>
-        <div id="text">a</div>
+    <body id="text">
+        <div >a</div>
         <script>
             var element = document.getElementById("text")
             fetch("https://potatoesskill.com/api/ryuukapatreons").then(res => {
                 return res.text();
             }).then(data => {
-                document = data
-                console.log(data)
+                element.innerHTML = data
+                
             })
         </script>
     </body>
